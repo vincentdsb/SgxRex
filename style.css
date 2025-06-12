@@ -1,94 +1,53 @@
-/* Polices galactiques */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+/* Réinitialisation basique */
+* {margin: 0; padding: 0; box-sizing: border-box;}
 
 body {
-  margin: 0;
-  font-family: 'Rajdhani', sans-serif;
-  background: linear-gradient(to right, #000010, #000030);
-  color: #e0e0e0;
-  text-align: center;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
 }
 
-/* En-tête avec alignement fixe */
 header {
-  background: rgba(0, 0, 0, 0.85);
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Corrige l'alignement */
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  backdrop-filter: blur(5px);
+  background: #004080;
+  color: #fff;
+  padding: 1rem;
 }
 
-/* Suppression du bouton inutilisé */
-.menu-toggle {
-  display: none; /* Supprime complètement */
-}
-
-/* Menu aligné proprement à droite */
-.menu {
+nav .menu {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  justify-content: flex-end; /* Maintient les liens à droite */
+  gap: 1rem;
 }
 
-.menu li a {
-  color: #00ffff;
+nav .menu a {
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
 }
 
-.menu li a:hover {
-  color: white;
-  text-shadow: 0 0 12px #00ffff;
+nav .menu a[aria-current="page"] {
+  text-decoration: underline;
 }
 
-/* Section principale bien alignée */
-main {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto; /* Centrer le contenu */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #e0e0e0;
 }
 
-/* Titres */
-h1, h2 {
-  font-family: 'Orbitron', sans-serif;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  background: #004080;
+  color: #fff;
+  border-radius: 4px;
 }
 
-/* Boutons */
-.cta-btn, button {
-  padding: 1rem 2.5rem;
-  background-color: #5865f2;
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.cta-btn:hover, button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #00ffff, 0 0 30px #ff8c00;
-}
-
-/* Pied de page bien positionné */
 footer {
-  background: rgba(0, 0, 0, 0.85);
-  padding: 1.8rem;
-  font-size: 0.9rem;
-  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
 }
