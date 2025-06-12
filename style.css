@@ -7,9 +7,10 @@ body {
   background: linear-gradient(to right, #000010, #000030);
   color: #e0e0e0;
   text-align: center;
+  overflow-x: hidden;
 }
 
-/* Effet d’arrière-plan animé */
+/* Arrière-plan animé */
 body::before {
   content: "";
   position: fixed;
@@ -19,7 +20,7 @@ body::before {
   height: 100%;
   background: url('img/star-bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.15;
   filter: blur(6px);
   z-index: -1;
 }
@@ -35,20 +36,21 @@ header {
   top: 0;
   width: 100%;
   z-index: 999;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
 }
 
 header img {
-  height: 40px;
+  height: 50px;
 }
 
 /* Menu */
 .menu {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
+  justify-content: flex-end;
 }
 
 .menu li a {
@@ -56,7 +58,7 @@ header img {
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .menu li a:hover {
@@ -66,10 +68,10 @@ header img {
 
 /* Sections principales */
 main {
-  padding: 3rem 1rem;
+  padding: 4rem 2rem;
 }
 
-/* Effet d’apparition */
+/* Effet d’apparition fluide */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -99,14 +101,13 @@ h1, h2 {
 /* Boutons */
 .cta-btn,
 button {
-  padding: 0.9rem 2rem;
+  padding: 1rem 2.5rem;
   background-color: #5865f2;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none;
   cursor: pointer;
   transition: 0.2s ease, box-shadow 0.3s ease;
 }
@@ -117,9 +118,35 @@ button:hover {
   box-shadow: 0 0 15px #00ffff, 0 0 30px #ff8c00;
 }
 
+/* Blocs de texte */
+.text-block {
+  margin: 4rem auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.highlight {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ff8c00;
+}
+
+/* Effet sur les valeurs et listes */
+.leaders li, .values li {
+  list-style: none;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+
+.values li::before {
+  content: "✪ ";
+  color: #00ffff;
+}
+
 /* Formulaire */
 form {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.07);
   padding: 2rem;
   border-radius: 12px;
   max-width: 600px;
@@ -128,16 +155,16 @@ form {
 
 input, textarea, select {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 1.2rem;
 }
 
 /* Pied de page */
 footer {
   background: rgba(0, 0, 0, 0.85);
-  padding: 1.5rem;
+  padding: 1.8rem;
   font-size: 0.9rem;
   margin-top: 4rem;
 }
