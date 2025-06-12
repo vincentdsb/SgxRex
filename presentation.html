@@ -3,30 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SGX Rex - Présentation</title>
+  <title>SGX Rex - Accueil</title>
+  <!-- Font Star Citizen (Orbitron) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <div class="logo">
+      <img src="logo-sc.png" alt="SGX Rex Logo" height="50">
+    </div>
     <nav>
       <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="presentation.html" aria-current="page">Présentation</a></li>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
         <li><a href="liens.html">Liens</a></li>
         <li><a href="recrutement.html">Recrutement</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
     </nav>
   </header>
 
   <main>
-    <h1>Notre entreprise</h1>
-    <p>SGX Rex est spécialisé dans ...</p>
-    <!-- Contenu détaillé -->
+    <section class="hero">
+      <h1>Bienvenue à bord de SGX Rex</h1>
+      <p>Explorez l’inconnu avec une technologie de pointe.</p>
+      <a class="btn" href="presentation.html">En savoir plus</a>
+    </section>
   </main>
 
   <footer>
-    <a href="merci.html">Merci</a>
-    <p>&copy; 2025 SGX Rex.</p>
+    <p>&copy; 2025 SGX Rex. Tous droits réservés.</p>
   </footer>
   <script src="script.js"></script>
 </body>
