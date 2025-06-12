@@ -9,6 +9,21 @@ body {
   text-align: center;
 }
 
+/* Effet d’arrière-plan animé */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/star-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.2;
+  filter: blur(6px);
+  z-index: -1;
+}
+
 /* En-tête */
 header {
   background: rgba(0, 0, 0, 0.85);
@@ -18,13 +33,16 @@ header {
   justify-content: space-between;
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 999;
+  backdrop-filter: blur(4px);
 }
 
 header img {
   height: 40px;
 }
 
+/* Menu */
 .menu {
   list-style: none;
   display: flex;
@@ -43,7 +61,7 @@ header img {
 
 .menu li a:hover {
   color: white;
-  text-shadow: 0 0 8px #00ffff;
+  text-shadow: 0 0 12px #00ffff;
 }
 
 /* Sections principales */
@@ -51,22 +69,29 @@ main {
   padding: 3rem 1rem;
 }
 
-.hero {
-  padding: 5rem 2rem;
-  background: url('img/star-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  animation: backgroundScroll 18s linear infinite;
+/* Effet d’apparition */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-in forwards;
 }
 
-@keyframes backgroundScroll {
-  0% { background-position: center 0; }
-  100% { background-position: center 300px; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Titres dynamiques */
 h1, h2 {
   font-family: 'Orbitron', sans-serif;
   color: #00ffff;
-  text-shadow: 0 0 12px #00ffff;
+  text-shadow: 0 0 15px #00ffff;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -77,90 +102,36 @@ button {
   padding: 0.9rem 2rem;
   background-color: #5865f2;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: 0.2s ease, box-shadow 0.3s ease;
 }
 
 .cta-btn:hover,
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #00ffff, 0 0 24px #ff8c00;
-}
-
-/* Cartes de fonctionnalités */
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-.feature {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 12px;
-  min-width: 220px;
-  max-width: 280px;
-  box-shadow: 0 0 6px #00ffff33;
-  transition: background 0.3s;
-}
-
-.feature:hover {
-  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #ff8c00;
 }
 
 /* Formulaire */
 form {
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   max-width: 600px;
   margin: 2rem auto;
 }
 
-label {
-  text-align: left;
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: bold;
-}
-
-input,
-textarea,
-select {
+input, textarea, select {
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.8rem;
   border: none;
   border-radius: 6px;
   margin-bottom: 1.2rem;
-}
-
-/* Liens utiles */
-.link-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
-}
-
-.link-list li {
-  margin: 0.8rem 0;
-}
-
-.link-list a {
-  color: #00ffff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link-list a:hover {
-  color: white;
-  text-shadow: 0 0 10px #00ffff;
 }
 
 /* Pied de page */
