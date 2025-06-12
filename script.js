@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const elements = document.querySelectorAll(".fade-in");
+  const features = document.querySelectorAll(".feature");
 
-  elements.forEach(el => {
-    setTimeout(() => el.style.opacity = 1, 500);
+  features.forEach(feature => {
+    feature.style.opacity = 0;
+    setTimeout(() => feature.style.opacity = 1, 500);
   });
 });
