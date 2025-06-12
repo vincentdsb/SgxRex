@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liens utiles – SGX Rex</title>
-  <meta name="description" content="Ressources et outils pour les joueurs de Star Citizen.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recrutement – SGX Rex</title>
+  <meta name="description" content="Postulez pour rejoindre SGX Rex : combat, exploration, commerce, soutien." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="sticky-header">
-    <img src="img/logo.png" alt="SGX Rex Logo">
+  <header>
+    <img src="img/logo.png" alt="SGX Rex Logo" />
     <nav>
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
@@ -23,20 +22,49 @@
   </header>
 
   <main class="fade-in">
-    <h1>Ressources utiles</h1>
-    <p>Voici quelques liens essentiels pour les joueurs de Star Citizen :</p>
+    <h1>Formulaire de recrutement</h1>
+    <p>Rejoignez notre escouade d’élite. Choisissez votre rôle, indiquez votre style de jeu, et entrez dans le verse à nos côtés.</p>
 
-    <ul>
-      <li><a href="https://robertsspaceindustries.com/" target="_blank">Site officiel Star Citizen</a></li>
-      <li><a href="https://discord.gg/5bKSGFFM" target="_blank">Notre Discord SGX Rex</a></li>
-      <li><a href="https://spacetraders.io/" target="_blank">Économie et commerce galactique</a></li>
-      <li><a href="https://www.youtube.com/c/StarCitizenFR" target="_blank">Vidéos et guides</a></li>
-    </ul>
+    <form name="contact" method="POST" data-netlify="true" action="merci.html">
+      <input type="hidden" name="form-name" value="contact" />
+
+      <label for="nom">Nom / Pseudo</label>
+      <input type="text" id="nom" name="nom" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="role">Quel rôle souhaitez-vous jouer ?</label>
+      <select id="role" name="role" required>
+        <option>Pilote de combat – Patrouille et interception</option>
+        <option>Explorateur – Découverte et reconnaissance</option>
+        <option>Marchand – Fret et optimisation économique</option>
+        <option>Support technique – Réparation & soins</option>
+        <option>Mineur – Extraction & raffinement</option>
+        <option>Transporteur – Logistique avancée</option>
+        <option>Commandement stratégique – Coordination des opérations</option>
+      </select>
+
+      <label for="gameplay">Quel est votre style de jeu ?</label>
+      <select id="gameplay" name="gameplay">
+        <option>Occasionnel (1-2 fois/semaine)</option>
+        <option>Régulier (3-4 fois/semaine)</option>
+        <option>Investi (5+ sessions/semaine)</option>
+        <option>Variable selon les missions</option>
+      </select>
+
+      <label for="experience">Votre expérience dans Star Citizen (ou autres MMO)</label>
+      <textarea id="experience" name="experience" rows="4"></textarea>
+
+      <label for="motivation">Pourquoi souhaitez-vous nous rejoindre ?</label>
+      <textarea id="motivation" name="motivation" rows="4"></textarea>
+
+      <button type="submit">Envoyer ma candidature</button>
+    </form>
   </main>
 
   <footer>
-    <p>© 2025 SGX Rex - Tous droits réservés</p>
+    <p>© 2025 SGX Rex – Tous droits réservés</p>
   </footer>
-
 </body>
 </html>
