@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recrutement SGX Rex</title>
-  <meta name="description" content="Rejoignez SGX Rex et devenez un membre clé de l’équipe !">
+  <meta name="description" content="Postulez pour rejoindre SGX Rex dans Star Citizen et choisissez votre rôle !">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="sticky-header">
+  <header>
     <img src="img/logo.png" alt="SGX Rex Logo">
     <nav>
       <ul class="menu">
@@ -23,8 +23,8 @@
   </header>
 
   <main class="fade-in">
-    <h1>Rejoignez SGX Rex</h1>
-    <p>Remplissez le formulaire ci-dessous pour postuler et rejoindre notre unité.</p>
+    <h1>Recrutement SGX Rex</h1>
+    <p>Bienvenue dans notre unité ! Choisissez votre rôle et rejoignez l’aventure.</p>
 
     <form name="contact" method="POST" data-netlify="true">
       <label for="nom">Nom / Pseudo :</label>
@@ -33,16 +33,28 @@
       <label for="email">Email :</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="role">Votre rôle préféré :</label>
+      <label for="role">Quel rôle souhaitez-vous jouer ?</label>
       <select id="role" name="role">
-        <option>Pilote de combat</option>
-        <option>Explorateur</option>
-        <option>Marchand</option>
-        <option>Support technique</option>
+        <option>Pilote de combat – Défense et patrouilles</option>
+        <option>Explorateur – Cartographie et repérage</option>
+        <option>Marchand – Commerce et logistique</option>
+        <option>Support – Ravitaillement et soins</option>
+        <option>Mineur – Extraction et commerce de ressources</option>
+        <option>Transporteur – Fret et gestion des expéditions</option>
       </select>
 
-      <label for="experience">Expérience :</label>
+      <label for="gameplay">Quel type de gameplay préférez-vous ?</label>
+      <select id="gameplay" name="gameplay">
+        <option>Casual – Jeu détente</option>
+        <option>Semi-Hardcore – Missions sérieuses mais flexibles</option>
+        <option>Hardcore – Jeu intensif et stratégique</option>
+      </select>
+
+      <label for="experience">Votre expérience sur Star Citizen :</label>
       <textarea id="experience" name="experience" rows="4"></textarea>
+
+      <label for="motivation">Pourquoi voulez-vous rejoindre SGX Rex ?</label>
+      <textarea id="motivation" name="motivation" rows="4"></textarea>
 
       <button type="submit">Envoyer ma candidature</button>
     </form>
