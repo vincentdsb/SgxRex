@@ -1,2 +1,1 @@
-# SgxRex
-guild sc
+# SGX Rex Site – Version propre pour Vercel

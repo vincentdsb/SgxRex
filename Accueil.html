@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SGX Rex - Unité d’élite francophone dans Star Citizen">
+  <title>SGX Rex - Accueil</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preload" href="img/star-citizen-hangar.jpg" as="image">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #000010, #000040);
+      color: #f0f0f0;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      position: relative;
+    }
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    .menu > li {
+      position: relative;
+    }
+    .menu > li > a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+    .menu li:hover > a {
+      color: #ffffff;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: rgba(0,0,0,0.9);
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      border-radius: 0 0 6px 6px;
+      z-index: 999;
+    }
+    .submenu li a {
+      padding: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+    .submenu li a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    .menu li:hover .submenu {
+      display: block;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: url('img/star-citizen-hangar.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .cta {
+      margin-top: 2rem;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #5865F2;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background-color: #404EED;
+    }
+    .pages {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 3rem auto;
+      flex-wrap: wrap;
+    }
+    .pages a {
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      min-width: 180px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .pages a:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="SGX Rex Logo" height="40" aria-label="Logo SGX Rex">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li>
+          <a href="#">Organisation</a>
+          <ul class="submenu">
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="liens.html">Liens utiles</a></li>
+          </ul>
+        </li>
+        <li><a href="https://discord.gg/5bKSGFFM" target="_blank">Discord</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Bienvenue chez SGX Rex</h1>
+    <p>Explorez l’univers de Star Citizen avec une unité d’élite francophone.</p>
+    <div class="cta">
+      <a href="https://discord.gg/5bKSGFFM" target="_blank">Rejoignez notre Discord</a>
+    </div>
+  </div>
+
+  <div class="pages">
+    <a href="presentation.html">Qui sommes-nous</a>
+    <a href="recrutement.html">Nous rejoindre</a>
+    <a href="liens.html">Ressources utiles</a>
+  </div>
+</body>
+</html>
