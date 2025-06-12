@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SGX Rex - Unité d’élite francophone dans Star Citizen">
   <title>Accueil – SGX Rex</title>
+  <link rel="preload" href="img/star-citizen-hangar.jpg" as="image">
   <style>
     body {
       margin: 0;
@@ -24,7 +26,7 @@
     header h1 {
       margin: 0;
       font-size: 2rem;
-      color: #0ff0fc;
+      color: #00ffff;
     }
     nav {
       display: flex;
@@ -39,7 +41,7 @@
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #0ff0fc;
+      color: #00ffff;
     }
     main {
       text-align: center;
@@ -47,29 +49,14 @@
       max-width: 900px;
       padding: 1rem;
     }
-    h2 {
-      color: #0ff0fc;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 10px;
-    }
     .call-to-action {
       margin-top: 3rem;
       padding: 1rem;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.1);
       border-radius: 10px;
     }
     .call-to-action a {
-      color: #0ff0fc;
+      color: #00ffff;
       font-weight: bold;
       text-decoration: none;
       font-size: 1.2rem;
@@ -80,27 +67,22 @@
       padding: 2rem;
       border-radius: 10px;
     }
-    .page-links h3 {
-      color: #0ff0fc;
-      margin-bottom: 1rem;
-    }
-    .page-links ul {
-      list-style: none;
-      padding: 0;
-    }
-    .page-links li {
-      margin: 0.5rem 0;
-    }
-    .page-links a {
-      color: #ffffff;
-      text-decoration: underline;
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Bienvenue sur le portail SGX Rex</h1>
-    <nav>
+    <nav aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="presentation.html">Présentation</a>
       <a href="recrutement.html">Recrutement</a>
@@ -110,20 +92,18 @@
 
   <main>
     <h2>Explorez l'univers de Star Citizen avec SGX Rex</h2>
-    <p>Nous sommes une guilde francophone dédiée à l'exploration, au commerce, au combat tactique et à l'organisation d'événements immersifs dans le verse. Rejoignez-nous pour une aventure unique sous la bannière de la coalition Phalanx Stellaris !</p>
-
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLkSTj2P2Utb4_BiRKo28Gi6yYcbHbLHOu" title="Vidéos Solid Gekko" allowfullscreen></iframe>
+    <p>Nous sommes une guilde francophone dédiée à l'exploration, au commerce, au combat tactique et à l'organisation d'événements immersifs.</p>
 
     <div class="call-to-action">
-      <p>👥 <a href="https://discord.gg/5bKSGFFM" target="_blank">Rejoignez-nous sur Discord</a> pour discuter, vous informer et participer à nos opérations !</p>
+      <p>👥 <a href="https://discord.gg/5bKSGFFM" target="_blank">Rejoignez-nous sur Discord</a> pour discuter et participer à nos opérations !</p>
     </div>
 
     <div class="page-links">
       <h3>Pages importantes</h3>
       <ul>
         <li><a href="presentation.html">Présentation de la guilde</a></li>
-        <li><a href="recrutement.html">Recrutement – Devenez un membre SGX Rex</a></li>
-        <li><a href="liens.html">Liens utiles pour joueurs Star Citizen</a></li>
+        <li><a href="recrutement.html">Nous rejoindre</a></li>
+        <li><a href="liens.html">Ressources utiles</a></li>
       </ul>
     </div>
   </main>
