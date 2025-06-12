@@ -3,20 +3,39 @@ body {
   margin: 0;
   background: linear-gradient(to right, #000010, #000040);
   color: white;
+  text-align: center;
 }
 
-.sticky-header {
-  position: sticky;
-  top: 0;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffffff;
 }
 
 .hero {
-  text-align: center;
   padding: 5rem 2rem;
   background: url('img/star-citizen-hangar.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -33,4 +52,25 @@ body {
   transition: transform 0.3s;
 }
 
-.cta-btn:hover
+.cta-btn:hover {
+  transform: scale(1.1);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem auto;
+}
+
+.feature {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
