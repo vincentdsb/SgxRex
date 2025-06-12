@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SGX Rex - Liens Utiles</title>
+  <title>SGX Rex - Liens Utiles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,22 +13,26 @@
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="presentation.html">Présentation</a></li>
-        <li><a href="liens.html" aria-current="page">Liens</a></li>
+        <li><a href="liens.html" class="active">Liens</a></li>
         <li><a href="recrutement.html">Recrutement</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
     </nav>
   </header>
 
   <main>
-    <h1>Liens Utiles</h1>
-    <ul>
-      <li><a href="https://www.example.com" target="_blank" rel="noopener">Example</a></li>
-      <!-- Autres liens -->
-    </ul>
+    <section class="container">
+      <h1>Liens Utiles</h1>
+      <ul>
+        <li><a href="https://robertsspaceindustries.com" target="_blank" rel="noopener">Site Officiel Star Citizen</a></li>
+        <li><a href="https://docs.star-citizen.fr" target="_blank" rel="noopener">Documentation SC</a></li>
+        <!-- Autres liens -->
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 SGX Rex.</p>
+    <p>&copy; 2025 SGX Rex.</p>
   </footer>
   <script src="script.js"></script>
 </body>
