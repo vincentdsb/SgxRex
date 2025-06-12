@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SGX Rex - Recrutement</title>
+  <title>SGX Rex - Recrutement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,26 +14,40 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="presentation.html">Présentation</a></li>
         <li><a href="liens.html">Liens</a></li>
-        <li><a href="recrutement.html" aria-current="page">Recrutement</a></li>
+        <li><a href="recrutement.html" class="active">Recrutement</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
     </nav>
   </header>
 
   <main>
-    <h1>Rejoignez-nous</h1>
-    <form action="/submit-candidature" method="POST">
-      <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="cv">CV:</label>
-      <input type="file" id="cv" name="cv" accept=".pdf" required>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
+    <section class="container form-section">
+      <h1>Rejoignez l'équipage</h1>
+      <form action="/submit-candidature" method="POST">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="poste">Poste souhaité :</label>
+        <select id="poste" name="poste" required>
+          <option value="">-- Sélectionner --</option>
+          <option value="ingénieur">Ingénieur Systèmes</option>
+          <option value="pilote">Pilote de Bord</option>
+          <option value="technicien">Technicien IA</option>
+        </select>
+
+        <label for="cv">CV (PDF) :</label>
+        <input type="file" id="cv" name="cv" accept=".pdf" required>
+
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 SGX Rex.</p>
+    <p>&copy; 2025 SGX Rex.</p>
   </footer>
   <script src="script.js"></script>
 </body>
