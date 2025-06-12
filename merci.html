@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merci pour votre inscription</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-    }
-    h1 {
-      color: #0ff0fc;
-    }
-    a {
-      margin-top: 2rem;
-      display: inline-block;
-      padding: 0.8rem 1.4rem;
-      background-color: #0ff0fc;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      background-color: #00cccc;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merci !</title>
+  <meta name="description" content="Votre candidature à SGX Rex a bien été envoyée !" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Merci pour votre candidature !</h1>
-  <p>Nous avons bien reçu votre inscription. Un recruteur SGX Rex vous contactera prochainement.</p>
-  <a href="https://discord.gg/5bKSGFFM" target="_blank">📡 Rejoindre notre Discord</a>
-  <a href="index.html">← Retour à l'accueil</a>
+  <header>
+    <img src="img/logo.png" alt="SGX Rex Logo" />
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="recrutement.html">Recrutement</a></li>
+        <li><a href="liens.html">Liens utiles</a></li>
+        <li><a href="https://discord.gg/5bKSGFFM" target="_blank">Discord</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <h1>Merci pour votre candidature !</h1>
+    <p>Nous avons bien reçu votre formulaire et allons l’étudier. 🚀</p>
+    <p>Rejoignez-nous sur Discord pour discuter avec les membres :</p>
+    <a href="https://discord.gg/5bKSGFFM" class="cta-btn">Accéder au Discord</a>
+  </main>
+
+  <footer>
+    <p>© 2025 SGX Rex – Tous droits réservés</p>
+  </footer>
 </body>
 </html>
