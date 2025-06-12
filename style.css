@@ -1,4 +1,4 @@
-/* Importation des polices */
+/* Importation des polices futuristes */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
 
 /* Paramètres généraux */
@@ -23,7 +23,7 @@ header {
   z-index: 1000;
 }
 
-/* Menu de navigation */
+/* Effet au survol du menu */
 .menu {
   list-style: none;
   display: flex;
@@ -34,11 +34,20 @@ header {
   text-decoration: none;
   color: #00ffff;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 .menu li a:hover {
   color: #ffffff;
+  text-shadow: 0px 0px 10px #00ffff;
+}
+
+/* Effet de glow */
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  color: #00ffff;
+  text-shadow: 0px 0px 15px #00ffff;
 }
 
 /* Section d'accueil */
@@ -54,23 +63,24 @@ header {
   100% { background-position: center 20px; }
 }
 
-/* Bouton interactif */
+/* Bouton stylisé */
 .cta-btn {
-  text-shadow: 0 0 8px #00ffff;
-  transition: box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #5865F2;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s;
 }
 
 .cta-btn:hover {
   box-shadow: 0 0 12px #00ffff, 0 0 20px #ff8c00;
+  transform: scale(1.1);
 }
 
-/* Effets de glow */
-h1, h2 {
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  color: #00ffff;
-}
-
+/* Encadré futuriste */
 .features {
   display: flex;
   justify-content: center;
