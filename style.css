@@ -10,28 +10,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Arrière-plan animé */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('img/star-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.15;
-  filter: blur(6px);
-  z-index: -1;
-}
-
-/* En-tête */
+/* En-tête avec alignement fixe */
 header {
   background: rgba(0, 0, 0, 0.85);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Corrige l'alignement */
   position: sticky;
   top: 0;
   width: 100%;
@@ -39,18 +24,19 @@ header {
   backdrop-filter: blur(5px);
 }
 
-header img {
-  height: 50px;
+/* Suppression du bouton inutilisé */
+.menu-toggle {
+  display: none; /* Supprime complètement */
 }
 
-/* Menu */
+/* Menu aligné proprement à droite */
 .menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Maintient les liens à droite */
 }
 
 .menu li a {
@@ -66,30 +52,14 @@ header img {
   text-shadow: 0 0 12px #00ffff;
 }
 
-/* Sections principales */
+/* Section principale bien alignée */
 main {
   padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto; /* Centrer le contenu */
 }
 
-/* Effet d’apparition fluide */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Titres dynamiques */
+/* Titres */
 h1, h2 {
   font-family: 'Orbitron', sans-serif;
   color: #00ffff;
@@ -99,69 +69,23 @@ h1, h2 {
 }
 
 /* Boutons */
-.cta-btn,
-button {
+.cta-btn, button {
   padding: 1rem 2.5rem;
   background-color: #5865f2;
   color: white;
   border-radius: 10px;
-  border: none;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.2s ease, box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.cta-btn:hover,
-button:hover {
+.cta-btn:hover, button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px #00ffff, 0 0 30px #ff8c00;
 }
 
-/* Blocs de texte */
-.text-block {
-  margin: 4rem auto;
-  max-width: 800px;
-  text-align: left;
-}
-
-.highlight {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-align: center;
-  color: #ff8c00;
-}
-
-/* Effet sur les valeurs et listes */
-.leaders li, .values li {
-  list-style: none;
-  font-weight: bold;
-  margin-bottom: 0.6rem;
-}
-
-.values li::before {
-  content: "✪ ";
-  color: #00ffff;
-}
-
-/* Formulaire */
-form {
-  background: rgba(255, 255, 255, 0.07);
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 0.9rem;
-  border: none;
-  border-radius: 8px;
-  margin-bottom: 1.2rem;
-}
-
-/* Pied de page */
+/* Pied de page bien positionné */
 footer {
   background: rgba(0, 0, 0, 0.85);
   padding: 1.8rem;
