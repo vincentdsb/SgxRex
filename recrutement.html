@@ -24,7 +24,11 @@
     <section class="container form-section">
       <h1>Rejoignez la Guilde SGX Rex</h1>
       <p>Remplissez ce formulaire pour postuler à nos rangs et décrire vos compétences.</p>
-      <form action="/thank-you" method="GET">
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <!-- Utilisation de Formspree pour notifications par email -->
+        <input type="hidden" name="_subject" value="Nouvelle candidature SGXREX">
+        <input type="hidden" name="_captcha" value="false">
+
         <!-- Informations personnelles -->
         <label for="nom">Nom de pilote :</label>
         <input type="text" id="nom" name="nom" placeholder="Ex : NovaX7" required>
