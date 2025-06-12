@@ -1,53 +1,128 @@
-/* Réinitialisation basique */
+/* =============== RESET =============== */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
+/* =============== VARIABLES =============== */
+:root {
+  --bg: #0a0f1a;
+  --text: #e0e6f3;
+  --accent: #66ccff;
+  --btn-bg: #1a8cff;
+  --btn-text: #ffffff;
+  --font-stack: 'Orbitron', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  font-family: var(--font-stack);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
 }
 
 header {
-  background: #004080;
-  color: #fff;
-  padding: 1rem;
+  background: rgba(10,15,26,0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent);
 }
 
 nav .menu {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-nav .menu a {
-  color: #fff;
+nav .menu li a {
+  color: var(--text);
   text-decoration: none;
+  font-weight: 700;
+  position: relative;
 }
 
-nav .menu a[aria-current="page"] {
-  text-decoration: underline;
+nav .menu li a.active,
+nav .menu li a:hover {
+  color: var(--accent);
+}
+
+.main, .container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  background: #e0e0e0;
+  padding: 6rem 2rem;
+  background: url('hero-bg.jpg') no-repeat center/cover;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0,204,255,0.7);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.75rem 1.5rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
   text-decoration: none;
-  background: #004080;
-  color: #fff;
-  border-radius: 4px;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #3999ff;
+}
+
+.form-section {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.form-section label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--text);
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background: #222;
-  color: #fff;
+  background: rgba(10,15,26,0.9);
+  color: var(--text);
 }
