@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rejoignez SGX Rex, l’unité d’élite francophone de Star Citizen">
   <title>Recrutement SGX Rex</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
@@ -43,41 +44,25 @@
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
     }
-    h1, h2 {
-      color: #0ff0fc;
-      text-align: center;
-    }
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
-    label {
-      font-weight: bold;
-    }
-    input, textarea {
-      padding: 0.5rem;
-      border: none;
-      border-radius: 5px;
-      width: 100%;
-    }
     button {
-      padding: 0.8rem;
-      background-color: #0ff0fc;
-      border: none;
-      border-radius: 5px;
+      background-color: #00ffff;
+      color: black;
       font-weight: bold;
+      border-radius: 5px;
+      padding: 0.8rem;
       cursor: pointer;
-    }
-    button:hover {
-      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="img/logo.png" alt="SGX Rex Logo">
-    <nav>
+    <img src="img/logo.png" alt="SGX Rex Logo" aria-label="Logo SGX Rex">
+    <nav aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="presentation.html">Présentation</a>
       <a href="recrutement.html">Recrutement</a>
@@ -88,35 +73,19 @@
 
   <main>
     <h1>Formulaire de recrutement SGX Rex</h1>
-    <p>Vous souhaitez rejoindre une unité d’élite dans Star Citizen ? SGX Rex vous propose un cadre structuré, un soutien constant et des objectifs ambitieux. Voici les rôles ouverts à tous :</p>
-    <ul>
-      <li><strong>Pilote de combat</strong> – défense et patrouilles</li>
-      <li><strong>Explorateur</strong> – analyse et cartographie des zones inexplorées</li>
-      <li><strong>Marchand</strong> – logistique, ravitaillement, commerce</li>
-      <li><strong>Support technique</strong> – réparation, ravitaillement, assistance médicale</li>
-    </ul>
-    <p>Chaque membre suit une intégration encadrée, avec mentorat et explication claire des spécialisations. Le recrutement vise à placer chaque joueur là où il s’épanouira au mieux.</p>
-
-    <form name="contact" method="POST" data-netlify="true" action="merci.html">
-      <input type="hidden" name="form-name" value="contact">
-
+    <p>Intégrez notre unité et choisissez un rôle adapté à votre style de jeu :</p>
+    
+    <form name="contact" method="POST" data-netlify="true">
       <label for="nom">Nom / Pseudo :</label>
       <input type="text" id="nom" name="nom" required>
 
       <label for="email">Email :</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="role">Quel rôle visez-vous ?</label>
-      <input type="text" id="role" name="role">
-
-      <label for="experience">Expérience dans Star Citizen ou d'autres MMO :</label>
-      <textarea id="experience" name="experience" rows="4"></textarea>
-
-      <label for="motivation">Pourquoi rejoindre SGX Rex ?</label>
-      <textarea id="motivation" name="motivation" rows="4"></textarea>
-
       <button type="submit">Envoyer ma candidature</button>
     </form>
+
+    <p>Ou contactez-nous directement : <a href="mailto:contact@sgxrex.com">contact@sgxrex.com</a></p>
   </main>
 </body>
 </html>
