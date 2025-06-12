@@ -1,9 +1,4 @@
-// Menu mobile toggle (si besoin)
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-}
+// Toggle menu mobile
+document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+  document.querySelector('.menu')?.classList.toggle('active');
+});
