@@ -28,6 +28,7 @@
         <!-- Utilisation de Formspree pour notifications par email -->
         <input type="hidden" name="_subject" value="Nouvelle candidature SGXREX">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="/merci.html">
 
         <!-- Informations personnelles -->
         <label for="nom">Nom de pilote :</label>
@@ -107,20 +108,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="poste">Poste souhaité :</label>
-    <select id="poste" name="poste" required>
-      <option value="">-- Sélectionner --</option>
-      <option value="ingénieur">Ingénieur Systèmes</option>
-      <option value="pilote">Pilote de Bord</option>
-      <option value="technicien">Technicien IA</option>
-    </select>
-
-    <label for="cv">CV (PDF) :</label>
-    <input type="file" id="cv" name="cv" accept=".pdf" required>
-
-    <button type="submit" class="btn">Envoyer</button>
-  </form>
-</section>
