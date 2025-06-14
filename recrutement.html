@@ -3,108 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SGX Rex - Recrutement Guilde</title>
+  <title>SGX Rex - Recrutement Guilde</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="presentation.html">Présentation</a></li>
-        <li><a href="liens.html">Liens</a></li>
-        <li><a href="recrutement.html" class="active">Recrutement</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
-    </nav>
-  </header>
 
-  <main>
-    <section class="container form-section">
-      <h1>Rejoignez la Guilde SGX Rex</h1>
-      <p>Remplissez ce formulaire pour postuler à nos rangs et décrire vos compétences.</p>
-      <form action="https://formspree.io/f/yourFormID" method="POST">
-        <!-- Utilisation de Formspree pour notifications par email -->
-        <input type="hidden" name="_subject" value="Nouvelle candidature SGXREX">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="/merci.html">
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="presentation.html">Présentation</a></li>
+      <li><a href="liens.html">Liens</a></li>
+      <li><a href="recrutement.html" class="active">Recrutement</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  </nav>
+</header>
 
-        <!-- Informations personnelles -->
-        <label for="nom">Nom de pilote :</label>
-        <input type="text" id="nom" name="nom" placeholder="Ex : NovaX7" required>
+<main class="container">
+  <section class="form-section">
+    <h1 class="page-title">Rejoignez la Guilde SGX Rex</h1>
+    <p class="intro">Remplissez ce formulaire pour postuler à nos rangs et décrire vos compétences.</p>
+    
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="hidden" name="_subject" value="Nouvelle candidature SGXREX">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="/merci.html">
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" placeholder="votre@mail.com" required>
+      <label for="nom">Nom de pilote :</label>
+      <input type="text" id="nom" name="nom" placeholder="Ex : NovaX7" required>
 
-        <!-- Informations de guilde -->
-        <label for="role">Rôle souhaité :</label>
-        <select id="role" name="role" required>
-          <option value="">-- Sélectionner un rôle --</option>
-          <option value="combat">Combattant</option>
-          <option value="exploration">Explorateur</option>
-          <option value="commerce">Commerçant</option>
-          <option value="transport">Transporteur</option>
-          <option value="support">Support & Logistique</option>
-        </select>
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="votre@mail.com" required>
 
-        <label for="experience">Niveau d'expérience :</label>
-        <select id="experience" name="experience" required>
-          <option value="">-- Sélectionner --</option>
-          <option value="debutant">Débutant</option>
-          <option value="intermediaire">Intermédiaire</option>
-          <option value="avance">Avancé</option>
-          <option value="expert">Expert</option>
-        </select>
+      <label for="role">Rôle souhaité :</label>
+      <select id="role" name="role" required>
+        <option value="">-- Sélectionner un rôle --</option>
+        <option value="combat">Combattant</option>
+        <option value="exploration">Explorateur</option>
+        <option value="commerce">Commerçant</option>
+        <option value="transport">Transporteur</option>
+        <option value="support">Support & Logistique</option>
+      </select>
 
-        <label for="faction">Préférence de faction :</label>
-        <select id="faction" name="faction">
-          <option value="aucun">Aucune</option>
-          <option value="uee">UEE</option>
-          <option value="khartu-al">Khartu-Al</option>
-          <option value="custom">Autre / Indifférent</option>
-        </select>
+      <label for="experience">Niveau d'expérience :</label>
+      <select id="experience" name="experience" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="debutant">Débutant</option>
+        <option value="intermediaire">Intermédiaire</option>
+        <option value="avance">Avancé</option>
+        <option value="expert">Expert</option>
+      </select>
 
-        <label for="specialites">Spécialités & tâches :</label>
-        <select id="specialites" name="specialites" multiple size="5">
-          <option value="pilotage">Pilotage vaisseau</option>
-          <option value="tir">Combat spatial</option>
-          <option value="minage">Minage et extraction</option>
-          <option value="craft">Artisanat & fabrication</option>
-          <option value="commerce-pro">Négociation commerciale</option>
-          <option value="reconnaissance">Reconnaissance</option>
-          <option value="piraterie">Piraterie</option>
-        </select>
+      <label for="faction">Préférence de faction :</label>
+      <select id="faction" name="faction">
+        <option value="aucun">Aucune</option>
+        <option value="uee">UEE</option>
+        <option value="khartu-al">Khartu-Al</option>
+        <option value="custom">Autre / Indifférent</option>
+      </select>
 
-        <label for="disponibilite">Disponibilité (heures/semaine) :</label>
-        <input type="number" id="disponibilite" name="disponibilite" min="1" max="168" placeholder="Ex : 20" required>
+      <label for="specialites">Spécialités & tâches :</label>
+      <select id="specialites" name="specialites" multiple size="5">
+        <option value="pilotage">Pilotage vaisseau</option>
+        <option value="tir">Combat spatial</option>
+        <option value="minage">Minage et extraction</option>
+        <option value="craft">Artisanat & fabrication</option>
+        <option value="commerce-pro">Négociation commerciale</option>
+        <option value="reconnaissance">Reconnaissance</option>
+        <option value="piraterie">Piraterie</option>
+      </select>
 
-        <label for="voice">Communication vocale :</label>
-        <select id="voice" name="voice" required>
-          <option value="discord">Discord</option>
-          <option value="teamspeak">TeamSpeak</option>
-          <option value="aucun">Pas de vocal</option>
-        </select>
+      <label for="disponibilite">Disponibilité (heures/semaine) :</label>
+      <input type="number" id="disponibilite" name="disponibilite" min="1" max="168" placeholder="Ex : 20" required>
 
-        <label for="langues">Langues parlées :</label>
-        <select id="langues" name="langues" multiple size="4">
-          <option value="fr">Français</option>
-          <option value="en">Anglais</option>
-          <option value="es">Espagnol</option>
-          <option value="de">Allemand</option>
-        </select>
+      <label for="voice">Communication vocale :</label>
+      <select id="voice" name="voice" required>
+        <option value="discord">Discord</option>
+        <option value="teamspeak">TeamSpeak</option>
+        <option value="aucun">Pas de vocal</option>
+      </select>
 
-        <label for="cv">CV & Portfolio (PDF) :</label>
-        <input type="file" id="cv" name="cv" accept=".pdf">
+      <label for="langues">Langues parlées :</label>
+      <select id="langues" name="langues" multiple size="4">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="es">Espagnol</option>
+        <option value="de">Allemand</option>
+      </select>
 
-        <button type="submit" class="btn">Postuler</button>
-      </form>
-    </section>
-  </main>
+      <label for="cv">CV & Portfolio (PDF) :</label>
+      <input type="file" id="cv" name="cv" accept=".pdf">
 
-  <footer>
-    <p>&copy; 2025 SGX Rex. Tous droits réservés.</p>
-  </footer>
-  <script src="script.js"></script>
+      <button type="submit" class="btn">Postuler</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 SGX Rex. Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
